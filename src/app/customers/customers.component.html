@@ -12,9 +12,13 @@
     >
     <a
       class="inline-block bg-orange-400 px-7 py-3"
-      routerLink="/customers/{{ c.id }}"
+      routerLink="/customers/{{ c.id }}/edit"
       >Modify</a
     >
-    <a class="inline-block bg-red-400 px-7 py-3" routerLink="/delete">Delete</a>
+    <a
+      class="inline-block bg-red-400 px-7 py-3"
+      routerLink="/customers/{{ c.id }}/delete"
+      >Delete</a
+    >
   </div>
 </div>

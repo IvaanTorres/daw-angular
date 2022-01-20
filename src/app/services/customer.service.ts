@@ -51,7 +51,11 @@ export class CustomerService {
   }
 
   getCustomer(id: Number) {
-    return this.customers.find((c) => c.id === id);
+    //! Nunca utilizar find() sino findIndex().
+    //! find() = Customer | undefined.
+    //! findIndex() = Customer.
+    const index = this.customers.findIndex((c) => c.id === id);
+    return this.customers[index];
   }
 
   createCustomer(customer: Customer) {
