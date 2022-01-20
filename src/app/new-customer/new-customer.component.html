@@ -1,1 +1,22 @@
-<p>new-customer works!</p>
+<form action="#">
+  <input
+    type="text"
+    placeholder="Id"
+    name="id"
+    [(ngModel)]="+customer.id"
+  /><br />
+  <input
+    type="text"
+    placeholder="Name"
+    name="name"
+    [(ngModel)]="customer.name"
+  /><br />
+  <input
+    type="text"
+    placeholder="Work"
+    name="work"
+    [(ngModel)]="customer.work"
+  /><br />
+
+  <input type="submit" value="Create" (click)="createCustomer()" />
+</form>

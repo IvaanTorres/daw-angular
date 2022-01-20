@@ -9,6 +9,8 @@ import { CustomersComponent } from './customers/customers.component';
 import { NewCustomerComponent } from './new-customer/new-customer.component';
 import { DelCustomerComponent } from './del-customer/del-customer.component';
 import { ModCustomerComponent } from './mod-customer/mod-customer.component';
+import { DetailsCustomerComponent } from './details-customer/details-customer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,11 @@ import { ModCustomerComponent } from './mod-customer/mod-customer.component';
     CustomersComponent,
     NewCustomerComponent,
     DelCustomerComponent,
-    ModCustomerComponent
+    ModCustomerComponent,
+    DetailsCustomerComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
