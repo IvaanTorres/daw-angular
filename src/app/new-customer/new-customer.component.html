@@ -1,22 +1,40 @@
-<form action="#">
-  <input
-    type="text"
-    placeholder="Id"
-    name="id"
-    [(ngModel)]="customer.id"
-  /><br />
-  <input
-    type="text"
-    placeholder="Name"
-    name="name"
-    [(ngModel)]="customer.name"
-  /><br />
-  <input
-    type="text"
-    placeholder="Work"
-    name="work"
-    [(ngModel)]="customer.work"
-  /><br />
+<div class="m-10">
+  <h2 class="text-center font-bold text-4xl mb-10 uppercase">
+    Create Customer
+  </h2>
+  <form action="#">
+    <div class="mb-10">
+      <label class="inline-block w-20 font-bold" for="id">ID:</label>
+      <input
+        class="border border-black p-1 mb-5"
+        type="text"
+        placeholder="Id"
+        name="id"
+        [(ngModel)]="customer.id"
+      /><br />
+      <label class="inline-block w-20 font-bold" for="name">Name:</label>
+      <input
+        class="border border-black p-1 mb-5"
+        type="text"
+        placeholder="Name"
+        name="name"
+        [(ngModel)]="customer.name"
+      /><br />
+      <label class="inline-block w-20 font-bold" for="name">Work:</label>
+      <input
+        class="border border-black p-1 mb-5"
+        type="text"
+        placeholder="Work"
+        name="work"
+        [(ngModel)]="customer.work"
+      /><br />
+    </div>
 
-  <input type="submit" value="Create" (click)="createCustomer()" />
-</form>
+    <input
+      class="bg-blue-400 px-10 py-3 font-bold cursor-pointer"
+      type="submit"
+      value="Create"
+      (click)="createCustomer()"
+    />
+  </form>
+</div>

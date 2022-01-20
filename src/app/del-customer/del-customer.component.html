@@ -1,4 +1,19 @@
-<h2>Delete Customer</h2>
-<p>Are you sure to delete this customer?</p>
-<p>Name: {{ customer.name }}</p>
-<button (click)="deleteCustomer()">Delete customer</button>
+<div class="m-10">
+  <h2 class="text-center font-bold uppercase text-4xl mb-10">
+    Delete Customer
+  </h2>
+  <p class="uppercase text-red-600 font-bold mb-5">
+    Are you sure to delete this customer?
+  </p>
+  <div class="mb-10">
+    <p>Customer details:</p>
+    <p><span class="font-bold">Name: </span> {{ customer.name }}</p>
+    <p><span class="font-bold">Work: </span> {{ customer.work }}</p>
+  </div>
+  <button
+    class="bg-blue-400 font-bold px-10 py-3 cursor-pointer"
+    (click)="deleteCustomer()"
+  >
+    Delete customer
+  </button>
+</div>
