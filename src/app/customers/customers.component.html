@@ -5,11 +5,16 @@
 <div class="w-1/2 flex justify-between ml-10" *ngFor="let c of customers">
   <span class="pt-3">{{ c.name }}</span>
   <div class="flex gap-3 mb-2">
-    <a class="inline-block bg-blue-400 px-7 py-3" routerLink="/new">Create</a
-    ><a class="inline-block bg-orange-400 px-7 py-3" routerLink="/modify"
-      >Modify</a
-    ><a class="inline-block bg-red-400 px-7 py-3" routerLink="/delete"
-      >Delete</a
+    <a
+      class="inline-block bg-blue-400 px-7 py-3"
+      routerLink="/customers/{{ c.id }}"
+      >Info</a
     >
+    <a
+      class="inline-block bg-orange-400 px-7 py-3"
+      routerLink="/customers/{{ c.id }}"
+      >Modify</a
+    >
+    <a class="inline-block bg-red-400 px-7 py-3" routerLink="/delete">Delete</a>
   </div>
 </div>
