@@ -12,12 +12,19 @@ import { CustomerService } from '../services/customer.service';
 export class ModCustomerComponent implements OnInit {
   constructor(
     private customersService: CustomerService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
-  //! PREGUNTAR COMO PONER OBJETO VACIO (ref<Customer>())
-  id = this.route.snapshot.params['id'];
-  customer = this.customersService.getCustomer(+this.id);
+  customer!: Customer;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const id = +this.route.snapshot.params['id'];
+    this.customer = this.customersService.getCustomer(id);
+  }
+
+  modifyCustomer() {
+    this.customersService.updateCustomer(this.customer);
+    this.router.navigate(['/customers']);
+  }
 }
