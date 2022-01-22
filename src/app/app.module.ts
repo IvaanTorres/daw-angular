@@ -11,6 +11,8 @@ import { DelCustomerComponent } from './del-customer/del-customer.component';
 import { ModCustomerComponent } from './mod-customer/mod-customer.component';
 import { DetailsCustomerComponent } from './details-customer/details-customer.component';
 import { FormsModule } from '@angular/forms';
+import { CustomersListComponent } from './customers-list/customers-list.component';
+import { CustomerCardComponent } from './customer-card/customer-card.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     DelCustomerComponent,
     ModCustomerComponent,
     DetailsCustomerComponent,
+    CustomersListComponent,
+    CustomerCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

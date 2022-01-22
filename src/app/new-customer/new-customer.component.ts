@@ -14,7 +14,7 @@ export class NewCustomerComponent implements OnInit {
     private router: Router
   ) {}
 
-  customer: Customer = { id: 0, name: '', work: '' };
+  customer: Customer = { id: 0, name: '', work: '', likes: 0 };
 
   ngOnInit(): void {}
 

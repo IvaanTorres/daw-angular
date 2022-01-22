@@ -1,0 +1,17 @@
+<div>
+  <h3 class="text-center font-bold text-2xl">
+    ID: {{ data.id }} - {{ data.name }}
+  </h3>
+  <img src="../../assets/{{ data.img }}" alt="photo" />
+  <div class="flex justify-center items-center mt-5">
+    <button class="bg-gray-400 font-bold px-5 py-3 mr-5" (click)="addLike()">
+      <</button
+    >{{ data.likes
+    }}<button
+      class="bg-gray-400 font-bold px-5 py-3 ml-5"
+      (click)="removeLike()"
+    >
+      >
+    </button>
+  </div>
+</div>

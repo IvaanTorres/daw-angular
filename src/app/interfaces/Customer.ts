@@ -3,4 +3,5 @@ export default interface Customer {
   name: string;
   work: string;
   img?: string;
+  likes: number;
 }
